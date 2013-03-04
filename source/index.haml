@@ -1,0 +1,13 @@
+.chat_window
+  .info_bar
+    .status_indicator 
+    Robert Hunt
+    .close_button x
+  .messages_window
+    .messages
+      .message#message_template
+        %img.user_img(src='http://placedog.com/60/60')
+        .message_txt
+  %form.message_form(action='#')
+    %input.message_input(type='text')
+

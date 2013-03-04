@@ -1,0 +1,60 @@
+
+$chat_window_height: 550px
+$info_bar_height: 60px
+$chat_window_width: 445px
+$input_height: 35px
+.chat_window
+  width: $chat_window_width
+  height: $chat_window_height
+  background: #fff
+  position: relative
+  font: 22px Helvetica
+.info_bar
+  height: $info_bar_height
+  background: #2c2c2c
+  color: #fff
+  line-height: 60px
+  position: relative
+  width: 100%
+  top: 0
+.status_indicator
+  display: inline-block
+  font-size: 60px
+  line-height: 60px
+  background-color: green
+  border-radius: 8px
+  margin: 10px
+  height: 16px
+  width: 16px
+  vertical-align: middle
+.close_button
+  float: right
+  margin-right: 15px
+  font-size: 40px
+  line-height: 60px
+  color: #ccc
+  font-weight: bold
+.messages_window
+  height: $chat_window_height - $info_bar_height - $input_height
+  overflow: auto
+  position: relative
+.messages
+  position: absolute
+  max-height: $chat_window_height - $info_bar_height - $input_height
+  bottom: 0
+  width: 100%
+.message
+  height: 65px
+  border-top: 2px solid #ccc
+  padding: 5px
+  background: #eee
+.usr_img
+  width: 60px
+  height: 60px
+  float: left
+  margin-right: 5px
+input.message_input
+  width: $chat_window_width - 5px
+  height: $input_height
+.message_template
+  //display: none
