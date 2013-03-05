@@ -1,8 +1,12 @@
 $ -> 
   $('.message_form').submit ->
-    input = $('.message_input')
-    message_txt = input.val()
-    new_msg = $('#message_template').clone().removeAttr('id').end().find('.message_txt').text(message_txt)
-    $('.messages').append(new_msg)
-    input.val('')
+    msg_input = $('.message_input')
+    msg_window = $('.messages_window')
+    msg_txt = msg_input.val()
+    msg_new = $('#message_template').clone().removeAttr('id').find('.message_txt').text(msg_txt).end()
+    $('.messages').append(msg_new)
+    msg_input.val('')
+
+    msg_window.scrollTop(msg_window.prop('scrollHeight'))
+
     false

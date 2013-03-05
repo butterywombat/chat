@@ -1,4 +1,3 @@
-
 $chat_window_height: 550px
 $info_bar_height: 60px
 $chat_window_width: 445px
@@ -16,11 +15,9 @@ $input_height: 35px
   line-height: 60px
   position: relative
   width: 100%
-  top: 0
 .status_indicator
   display: inline-block
   font-size: 60px
-  line-height: 60px
   background-color: green
   border-radius: 8px
   margin: 10px
@@ -30,13 +27,15 @@ $input_height: 35px
 .close_button
   float: right
   margin-right: 15px
-  font-size: 40px
-  line-height: 60px
+  font-size: 28px
   color: #ccc
+  cursor: pointer
   font-weight: bold
 .messages_window
   height: $chat_window_height - $info_bar_height - $input_height
-  overflow: auto
+  overflow-y: auto
+  overflow-x: hidden
+  word-wrap: break-word
   position: relative
 .messages
   position: absolute
@@ -44,17 +43,18 @@ $input_height: 35px
   bottom: 0
   width: 100%
 .message
-  height: 65px
+  min-height: 64px
   border-top: 2px solid #ccc
   padding: 5px
   background: #eee
-.usr_img
-  width: 60px
-  height: 60px
+.user_img
+  display: block
   float: left
   margin-right: 5px
+.message_txt
+  vertical-align: top
 input.message_input
   width: $chat_window_width - 5px
   height: $input_height
-.message_template
-  //display: none
+#message_template
+  display: none
